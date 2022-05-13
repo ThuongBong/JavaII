@@ -30,7 +30,7 @@ public class StudentManager {
             System.out.format("%5d | ", student.getEnrolID());
             System.out.format("%20s | ", student.getFirstName());
             System.out.format("%20s | ", student.getLastName());
-            System.out.format("%5d | ", student.getAge());
+            System.out.format("%20d | ", student.getAge());
 
         }
     }

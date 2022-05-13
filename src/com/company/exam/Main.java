@@ -10,7 +10,6 @@ public class Main {
         String choose = null;
         boolean exit = false;
         StudentManager studentManager = new StudentManager();
-        int studentId;
         showMenu();
         while (true) {
             choose = scanner.nextLine();
@@ -18,10 +17,10 @@ public class Main {
                 case "1":
                     studentManager.add();
                     break;
-                case "3":
+                case "2":
 
                     break;
-                case "6":
+                case "3":
                     studentManager.show();
                     break;
                 case "0":

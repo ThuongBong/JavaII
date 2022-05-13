@@ -10,7 +10,9 @@ public class StudentDoc {
     public void write(List<Students> studentList) throws IOException {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
-        oos.writeObject(studentList);
+        if (oos != null) {
+            oos.writeObject(studentList);
+        }
         try {
             fos = new FileOutputStream(new File(STUDENTS_FILE_NAME));
             oos = new ObjectOutputStream(fos);
