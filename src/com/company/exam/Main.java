@@ -10,6 +10,7 @@ public class Main {
         String choose = null;
         boolean exit = false;
         StudentManager studentManager = new StudentManager();
+        int studentId;
         showMenu();
         while (true) {
             choose = scanner.nextLine();
@@ -21,9 +22,11 @@ public class Main {
 
                     break;
                 case "3":
+                    System.out.println(" EnrolID  \t\t\tFirstName \t\t\tLastName\t\t\t\tAge");
+                    System.out.println(" -------        --------------     ----------------          -------");
                     studentManager.show();
                     break;
-                case "0":
+                case "4":
                     System.out.println("exited!");
                     exit = true;
                     break;
@@ -42,7 +45,7 @@ public class Main {
     private static void showMenu() {
         System.out.println("-----------menu------------");
         System.out.println("1. Add new student.");
-        System.out.println("2.Save.");
+        System.out.println("2. Save.");
         System.out.println("3. Display all students.");
         System.out.println("4.  Exit");
         System.out.println("---------------------------");

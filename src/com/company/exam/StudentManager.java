@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class StudentManager {
     public static Scanner scanner = new Scanner(System.in);
     private List<Students> studentList;
-    private StudentDoc studentDoc;
+    private final StudentDoc studentDoc;
 
     public StudentManager() {
         studentDoc = new StudentDoc();
@@ -27,10 +27,11 @@ public class StudentManager {
 
     public void show() {
         for (Students student : studentList) {
-            System.out.format("%5d | ", student.getEnrolID());
-            System.out.format("%20s | ", student.getFirstName());
-            System.out.format("%20s | ", student.getLastName());
-            System.out.format("%20d | ", student.getAge());
+            System.out.format("%5d", student.getEnrolID());
+            System.out.format("%20s", student.getFirstName());
+            System.out.format("%20s", student.getLastName());
+            System.out.format("%20d", student.getAge());
+            System.out.format("\n");
 
         }
     }
